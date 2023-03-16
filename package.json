@@ -1,19 +1,26 @@
 {
   "private": true,
   "scripts": {
+    "init": "corepack enable && corepack prepare pnpm@latest --activate && pnpm run bootstrap",
+    "bootstrap": "pnpm install && husky install",
     "build": "turbo run build",
     "dev": "turbo run dev",
     "dev:web": "turbo run dev --filter=web",
     "lint": "turbo run lint",
     "clean": "turbo run clean",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "hook:pre-commit": "lint-staged",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
     "eslint-config-custom": "workspace:*",
+    "git-commit-msg-linter": "^4.9.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.11",
+    "tsconfig": "workspace:*",
     "turbo": "latest"
   },
-  "packageManager": "pnpm@7.15.0"
+  "packageManager": "pnpm@7.28.0"
 }

@@ -1,9 +1,14 @@
-import "../styles/globals.css";
-// include styles from the ui package
-import "ui/styles.css";
+import "../styles/globals.css"
 
-import type { AppProps } from "next/app";
+import type { AppProps } from "next/app"
+import { useRouter } from "next/router"
+import { SSRProvider } from "react-aria"
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  const router = useRouter()
+  return (
+    <SSRProvider>
+      <Component {...pageProps} />
+    </SSRProvider>
+  )
 }

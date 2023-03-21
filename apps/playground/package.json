@@ -9,13 +9,25 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.0.16",
+    "@internationalized/date": "^3.1.0",
+    "@react-aria/datepicker": "^3.3.0",
+    "@react-types/button": "^3.7.1",
+    "@react-types/checkbox": "^3.4.2",
+    "@react-types/combobox": "^3.6.0",
+    "@react-types/menu": "^3.8.0",
+    "@react-types/select": "^3.7.0",
+    "@react-types/shared": "^3.17.0",
+    "clsx": "^1.2.1",
     "next": "latest",
     "react": "^18.2.0",
+    "react-aria": "^3.23.1",
     "react-dom": "^18.2.0",
-    "ui": "workspace:*"
+    "react-stately": "^3.21.0",
+    "react-transition-group": "^4.4.5"
   },
   "devDependencies": {
-    "@types/node": "^18.11.17",
+    "@types/node": "18",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
     "autoprefixer": "^10.4.13",

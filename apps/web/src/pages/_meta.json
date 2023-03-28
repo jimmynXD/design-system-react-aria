@@ -1,0 +1,15 @@
+{
+  "index": {
+    "title": "Home",
+    "display": "hidden",
+    "type": "page",
+    "theme": {
+      "layout": "full"
+    }
+  },
+
+  "contact": {
+    "type": "page",
+    "title": "Contact Info"
+  }
+}

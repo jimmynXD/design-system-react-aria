@@ -45,7 +45,7 @@ export function KitchenSinkPage() {
       </Head>
       <div className="min-h-screen">
         <PageNav />
-        <main className="px-8 pb-12">
+        <main className="px-8 pb-20">
           <div className="pt-20" id="checkbox">
             <h1 className="text-3xl font-bold">Checkbox</h1>
             <Checkbox>Test</Checkbox>

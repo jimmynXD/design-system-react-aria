@@ -1,45 +1,28 @@
-import { Button } from "@/ui"
-import { useRouter } from "next/router"
+import Head from "next/head"
+import { PageNav } from "../components"
 
 export function LandingPage() {
-  const routes = [
-    {
-      label: "Kitchen Sink",
-      path: "/kitchen-sink",
-    },
-    {
-      label: "Form",
-      path: "/components/form",
-    },
-    {
-      label: "Calendar",
-      path: "/components/calendar",
-    },
-    {
-      label: "Date Field",
-      path: "/components/date-field",
-    },
-    {
-      label: "Date Picker",
-      path: "/components/date-picker",
-    },
-    {
-      label: "Dropdowns",
-      path: "/components/drop",
-    },
-    {
-      label: "Modal",
-      path: "/components/modal",
-    },
-  ]
-  const router = useRouter()
   return (
-    <main className="flex flex-wrap p-4 lg:px-8">
-      {routes.map((route, index) => (
-        <section key={index} className="pr-4 pb-4 last:pr-0">
-          <Button onPress={() => router.push(route.path)}>{route.label}</Button>
-        </section>
-      ))}
-    </main>
+    <>
+      <Head>
+        <title>Playground</title>
+      </Head>
+      <main className="min-h-screen flex flex-col lg:max-w-7xl">
+        <PageNav />
+        <div className="flex flex-col items-center justify-center mt-16 min-h-[calc(100vh_-_5rem)]">
+          <h1 className="text-2xl font-medium drop-shadow text-purple-600 max-w-5xl p-4">
+            Simple and Complex Components created with
+          </h1>
+          <ul className="list-disc">
+            <li>React Aria</li>
+            <li>Tailwind css</li>
+            <ul className="list-disc ml-8">
+              <li>dark mode</li>
+              <li>light mode</li>
+            </ul>
+          </ul>
+        </div>
+      </main>
+    </>
   )
 }

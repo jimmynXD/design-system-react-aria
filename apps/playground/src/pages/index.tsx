@@ -1,1 +1,1 @@
-export { KitchenSinkPage as default } from "@/ui"
+export { LandingPage as default } from "@/meta"

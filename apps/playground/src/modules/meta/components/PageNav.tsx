@@ -1,7 +1,9 @@
 import clsx from "clsx"
+import { useTheme } from "next-themes"
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/router"
+import { Select, Item } from "@/ui/pulled"
 export function PageNav() {
   const links = [
     "checkbox",
@@ -17,6 +19,7 @@ export function PageNav() {
   ]
 
   const router = useRouter()
+  const { setTheme } = useTheme()
   const navLinks = [
     {
       label: "Components",
@@ -88,7 +91,32 @@ export function PageNav() {
             >
               Github
             </Link>
-            <span className="flex items-center pl-4"></span>
+            <span className="flex items-center pl-4">
+              <Select
+                defaultSelectedKey={"system"}
+                onSelectionChange={(value) =>
+                  setTheme(value as "dark" | "light" | "system")
+                }
+              >
+                <Item key="light">
+                  <div className="flex items-center space-x-2">
+                    <span className="material-symbols-rounded">light_mode</span>
+                  </div>
+                </Item>
+                <Item key="dark">
+                  <div className="flex items-center space-x-2">
+                    <span className="material-symbols-rounded">dark_mode</span>
+                  </div>
+                </Item>
+                <Item key="system">
+                  <div className="flex items-center space-x-2">
+                    <span className="material-symbols-rounded">
+                      brightness_auto
+                    </span>
+                  </div>
+                </Item>
+              </Select>
+            </span>
           </div>
         </div>
       </header>

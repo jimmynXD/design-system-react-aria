@@ -18,9 +18,22 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.2.0",
     "prettier": "^2.7.1",
-    "prettier-plugin-tailwindcss": "^0.1.11",
-    "tsconfig": "workspace:*",
     "turbo": "latest"
   },
-  "packageManager": "pnpm@7.28.0"
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "custom"
+    ]
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix"
+    ],
+    "*.{tsx,jsx,css,scss}": [
+      "prettier --write"
+    ]
+  },
+  "packageManager": "pnpm@7.30.5",
+  "prettier": "prettier-config-marcomm"
 }

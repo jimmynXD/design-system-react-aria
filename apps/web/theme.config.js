@@ -10,6 +10,7 @@ export default {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta property="og:title" content="jamesnpro" />
       <meta property="og:description" content="jamesnpro ux" />
+      <script src="https://cdn.optimizely.com/js/24503370226.js"></script>
     </>
   ),
   useNextSeoProps() {

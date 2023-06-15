@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "path": "apps",
+      "name": "💻 apps"
+    },
+    {
+        "path": "packages",
+        "name": "📦 packages"
+    }
+    {
+      "path": ".",
+      "name": "🌱 root"
+    }
+  ],
+  "settings": {
+    "typescript.tsdk": "node_modules/typescript/lib"
+  }
+}

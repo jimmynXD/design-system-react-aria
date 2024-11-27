@@ -15,7 +15,7 @@ export default {
   ),
   useNextSeoProps() {
     return {
-      titleTemplate: "%s – jamesnpro/uxe",
+      titleTemplate: "%s | jamesnpro projects",
     }
   },
 
@@ -26,7 +26,7 @@ export default {
           <Image width={24} height={24} src="/favicon.png" />
         </span>
         <span className="text-sm font-display tracking-wide font-semibold">
-          jamesnpro/uxe
+          jamesnpro
         </span>
       </span>
     </span>
@@ -37,7 +37,7 @@ export default {
   footer: {
     text: (
       <span className="text-sm">
-        ©{currentYear} jamesnpro - user experience engineer / design engineer
+        ©{currentYear} jamesnpro - sofware engineer
       </span>
     ),
   },
